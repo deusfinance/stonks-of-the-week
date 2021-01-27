@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 18px 22px;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 999;
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media screen and (max-width: 420px) {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+    .finance {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
+      @media screen and (max-width: 420px) {
+        margin-left: 0px;
+        margin-top: 10px
+      }
+    }
+    .accountInfo {
+      margin-left: 22px;
+      padding: 1px;
+      background: linear-gradient(190deg, #5EC4D6 0%, #F1FC68 100%);
+      border-radius: 6px;
+      width: 200px;
+      border-width: 1px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+
+      @media screen and (max-width: 420px) {
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+      .accountInfoText {
+        color: white;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Times New Roman;
+        background-color: #0e1d1b;
+        border-radius: 6px;
+        padding: 10px 35px 10px 25px;
+      }
+      .accountInfoRightText {
+        color: white;
+        font-family: Times New Roman;
+        background-color: #0e1d1b;
+        right: 20px;
+        position: absolute;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+    .rowItem {
+      display: flex;
+      flex-direction: row;
+      margin-left: 30px;
+      align-items: center;
+      .text {
+        font-size: 20px;
+        font-family: Monument Grotesk;
+        color: white;
+        font-weight: 400;
+        margin-right: 9px;
+      }
+    }
+  }
+}

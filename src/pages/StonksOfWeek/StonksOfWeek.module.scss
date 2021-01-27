@@ -1,0 +1,15 @@
+@import "styles";
+
+.root {
+  background-color: $backgroundColor;
+  height: 100%;
+  min-height: 100vh;
+  .main {
+    max-width: 1920px;
+    .body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.main {
+  margin-right: 80px;
+  margin-bottom: 50px;
+  .title {
+    font-family: Edu Monument Grotesk Mono;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+  }
+  .items {
+    margin-top: 25px;
+    .item {
+      font-family: Edu Monument Grotesk Mono;
+      font-weight: 400;
+      font-size: 20px;
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        opacity: 1;
+        text-shadow: 0px 0px 10px #FFFFFF;
+      }
+    }
+    a:-webkit-any-link {
+      color: white !important;
+      text-decoration: none !important;
+
+    }
+  }
+}

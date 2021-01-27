@@ -1,0 +1,55 @@
+.button {
+  background: linear-gradient(44.74deg, #5EC4D6 0.19%, #C4EB89 100.22%, #F1FC68 100.22%), #A2DEA4;
+  border-radius: 6px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 1;
+    box-shadow: 0px 0px 10px #FFFFFF;
+  }
+  .text {
+    text-align: center;
+    color: black;
+    font-family: Edu Monument Grotesk Semi-Mono;
+    font-weight: 400;
+  }
+}
+.big {
+  padding: 13px;
+  width: 215px;
+  .text {
+    font-size: 20px;
+  }
+}
+.small {
+  padding: 9px;
+  width: 75px;
+  .text {
+    font-size: 16px;
+  }
+}
+.long {
+  padding: 10px;
+  width: 230px;
+  .text {
+    font-size: 16px;
+  }
+}
+.disabled {
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 1;
+    cursor: initial;
+  }
+  &:active {
+    opacity: 1;
+  }
+}

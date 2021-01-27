@@ -1,0 +1,206 @@
+.bodyMain {
+  margin-top: 50px;
+  max-width: 1250px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+  }
+  .stonkDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+    .ofTheWeek {
+      margin-left: 18px;
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 600;
+      font-size: 50px;
+      color: white;
+    }
+  }
+  .descriptionDiv {
+    margin-top: 18px;
+    .line {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      span {
+        background: -webkit-linear-gradient(#a3dea3, #c4eb8a);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  .mainContainer {
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1439px) {
+      width: 1000px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 650px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 300px;
+    }
+    .votted {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .vottedText {
+        font-family: Edu Monument Grotesk Semi-Mono;
+        background: -webkit-linear-gradient(#a3dea3, #c4eb8a);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 30px 0px 15px 0px;
+      }
+    }
+    .leaderboard {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 600;
+      color: white;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 63px;
+    }
+    .searchDiv {
+      margin-top: 50px;
+      position: relative;
+      width: 100%;
+      .searchDescription {
+        font-family: Edu Monument Grotesk Mono;
+        font-weight: 400;
+        color: white;
+        font-size: 15px;
+        padding-left: 20px;
+      }
+      .searchInputDiv {
+        margin-top: 13px;
+        background-color: #0d0d0d;
+        border-radius: 6px;
+        padding: 6px 20px;
+        border: 1px solid #808080;
+        display: flex;
+        flex-direction: row;
+        .searchPrefix {
+          font-family: Edu Monument Grotesk Mono;
+          font-weight: 400;
+          font-size: 20px;
+          color: rgba(255,255,255,0.4);
+          width: 70px;
+        }
+        input {
+          background-color: #0d0d0d;
+          color: white;
+          border: none;
+          font-family: Edu Monument Grotesk Mono;
+          font-weight: 400;
+          font-size: 20px;
+          width: 100%;
+        }
+        input:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      .modalContainer {
+        position: absolute;
+        top: 50;
+        left: 0;
+        width: 100%;
+        border-radius: 6px;
+        background-color: #0d0d0d;
+      }
+    }
+  }
+  .firstRankDiv {
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e1d1d;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-top: 50px;
+    width: calc(100% - 42px);
+    .firstRankText {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 600;
+      font-size: 25px;
+      color: white;
+      text-shadow: 0px 0px 10px #FFFFFF;
+    }
+    .itemName {
+      margin-top: 13px;
+      font-family: Edu Monument Grotesk Semi-Mono;
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .itemDescription {
+      font-family: Edu Monument Grotesk Mono;
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .details {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 20px;
+      color: white;
+    }
+  }
+  .otherRanks {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0px 15px;
+    background-color: #0e1e1b;
+    border-radius: 10px;
+    width: calc(100% - 30px);
+  }
+  .pageNavigation {
+    margin-bottom: 120px;
+  }
+  .loading {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .spinner {
+      width: 100px;
+      height: 100px;
+      div {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
