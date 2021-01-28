@@ -252,7 +252,7 @@ export default function MainBody({account: address}) {
                         onVote={() => onVote(item)}
                         item={item}
                         rank={1 + index}
-                        last={index === Math.min(getSearchArray().length, 5)}
+                        last={index === getSearchArray().length - 1}
                       />
                     )
                   } else {
