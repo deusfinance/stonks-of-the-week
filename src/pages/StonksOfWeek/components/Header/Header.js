@@ -5,6 +5,10 @@ import { ReactComponent as DownIcon } from 'icons/Down_Icon.svg';
 import styles from './Header.module.scss';
 
 export default function Header({account : address}) {
+  const getAddressFormat = (address) => {
+    return address.slice(0, 6) + '...' + address.slice(address.length - 4, address.length)
+  }
+
   return (
     <div className={styles.header}>
       <div className={styles.left}>
@@ -13,11 +17,11 @@ export default function Header({account : address}) {
         {address ? (
           <div className={styles.accountInfo}>
             <div className={styles.accountInfoText}>
-              {address}
+              {getAddressFormat(address)}
             </div>
-            <div className={styles.accountInfoRightText}>
+            {/* <div className={styles.accountInfoRightText}>
               {address.slice(address.length - 2)}
-            </div>
+            </div> */}
           </div>
         ) : null}
       </div>

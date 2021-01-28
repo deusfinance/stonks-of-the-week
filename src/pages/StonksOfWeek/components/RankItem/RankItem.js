@@ -29,9 +29,9 @@ export default function RankItem({ voted, search, onVote, rank, last, item }) {
       <div className={styles.right}>
         <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes so far</div>
         {
-          item?.alreadyConducted === false ? (
+          item?.vote?.closed === false ? (
             <Button size="small" text="VOTE" handleClick={() => onVote(item.id)} />
-          ) : search ? (<span className={styles.alreadyConducted}>already conducted</span>) : null
+          ) : search ? (<span className={styles.alreadyConducted}>Closed</span>) : null
         }
       </div>
     </div>

@@ -29,8 +29,8 @@
     }
     .accountInfo {
       margin-left: 22px;
-      padding: 1px;
-      background: linear-gradient(190deg, #5EC4D6 0%, #F1FC68 100%);
+      padding: 2px;
+      background: linear-gradient(90.11deg,#69c9ce 1.13%,#d5e061 98.54%);
       border-radius: 6px;
       width: 200px;
       border-width: 1px;
@@ -44,21 +44,14 @@
         margin-top: 20px;
       }
       .accountInfoText {
+        width: 100%;
+        text-align: center;
         color: white;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        font-family: Times New Roman;
-        background-color: #0e1d1b;
+        font-size: 21px;
+        font-family: 'Edu Monument Grotesk Mono';
+        background-color: #101010;
         border-radius: 6px;
-        padding: 10px 35px 10px 25px;
-      }
-      .accountInfoRightText {
-        color: white;
-        font-family: Times New Roman;
-        background-color: #0e1d1b;
-        right: 20px;
-        position: absolute;
+        padding: 10px 20px 10px 20px;
       }
     }
   }

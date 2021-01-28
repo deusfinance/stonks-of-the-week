@@ -204,7 +204,7 @@ export default function MainBody({account: address}) {
   const getSearchArray = () => {
     return [firstItem, ...searchStocks].filter(each => each.id !== firstItem.id);
   }
-
+  console.log('firstItem', firstItem)
   return (
     <div className={styles.bodyMain}>
       {modalShow && <div className={styles.overlay} onClick={() => hideModal()} />}
