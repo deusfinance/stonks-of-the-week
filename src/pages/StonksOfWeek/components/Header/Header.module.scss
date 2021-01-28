@@ -30,9 +30,10 @@
     .accountInfo {
       margin-left: 22px;
       padding: 2px;
-      background: linear-gradient(90.11deg,#69c9ce 1.13%,#d5e061 98.54%);
+      // background: linear-gradient(90.11deg,#69c9ce 1.13%,#d5e061 98.54%);
+      background: #234545;
       border-radius: 6px;
-      width: 200px;
+      width: 240px;
       border-width: 1px;
       display: flex;
       flex-direction: row;
@@ -49,9 +50,9 @@
         color: white;
         font-size: 21px;
         font-family: 'Edu Monument Grotesk Mono';
-        background-color: #101010;
+        background-color: #0e1d1b;
         border-radius: 6px;
-        padding: 10px 20px 10px 20px;
+        padding: 5px 40px 5px 40px;
       }
     }
   }

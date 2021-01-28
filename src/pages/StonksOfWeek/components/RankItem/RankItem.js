@@ -10,7 +10,7 @@ export default function RankItem({ voted, search, onVote, rank, last, item }) {
       <div className={styles.left}>
         <div className={styles.rankData}>
           <div className={styles.rankText}>
-            #{item?.vote?.ranking === 0 ? '' : item?.vote?.ranking}
+            #{item?.vote?.ranking === 0 ? 'Na' : item?.vote?.ranking}
           </div>
           <div className={styles.percent}>
             {item?.vote?.percentageShare}%

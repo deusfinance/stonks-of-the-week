@@ -237,10 +237,7 @@ export default function MainBody({account: address}) {
             Not happy with the top votes? Search, find and vote for your pick
           </div>
           <div className={styles.searchInputDiv}>
-            {!modalShow ? (
-              <span className={styles.searchPrefix}>Search</span>
-            ) : null}
-            <input value={searchInput} onChange={e => onChangeInput(e.target.value)} />
+            <input value={searchInput} placeholder="Search" onChange={e => onChangeInput(e.target.value)} />
           </div>
           {modalShow && (
             <div className={styles.modalContainer}>
