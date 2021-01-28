@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  padding: 18px 22px;
+  padding: 5px 22px;
   justify-content: space-between;
   border-bottom: 1px solid white;
   position: sticky;
@@ -72,6 +72,106 @@
         color: white;
         font-weight: 400;
         margin-right: 9px;
+      }
+    }
+    .rightNav {
+      font-family: Monument Grotesk;
+      font-weight: 400;
+      .arrowNav {
+        margin-left: 5px;
+        margin-bottom: 2px;
+      }
+      .subNav {
+        display: none;
+        position: absolute;
+        min-width: 249px;
+        right: 0;
+        top: 59px;
+        z-index: 10;
+        padding: 0px;
+        // border: 1px solid #808080;
+        // padding-top: 15px;
+        // border-top: none;
+        background: #0d0d0d;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 0px 5px 5px;
+        .subNavItem {
+          background: #0d0d0d;
+          border: 2px solid #808080;
+          border-bottom-width: 1px;
+          border-top: none;
+          color: #ffffff;
+          text-align: left;
+          text-decoration: none;
+          font-size: 20px;
+          display: block;
+          .active {
+            background-color: #8f9a9a;
+            border-bottom: none;
+            &:hover {
+              color: #ffffff;
+            }
+          }
+          a {
+            padding: 10px 0;
+            padding-right: 24px;
+            justify-content: flex-end;
+            &:hover {
+              color: #8f9a9a;
+            }
+          }
+          &:last-child {
+            // background: #831414;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-bottom-width: 2px;
+          }
+        }
+      }
+      ul {
+        margin-right: 10px;
+        font-size: 20px;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+  
+        a {
+          display: flex;
+          text-decoration: none;
+          color: #ffffff;
+          padding: 5px 10px;
+          align-items: center;
+          .navItemTop {
+            font-size: 20px;
+          }
+          .navItemBottom {
+            margin-top: -1px;
+            font-size: 12px;
+            // font-weight: 600;
+          }
+        }
+  
+        .navItem {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          margin-right: 10px;
+          text-align: center;
+          position: relative;
+          .active {
+            border-bottom: 2px solid #808080;
+          }
+          &:hover {
+            .navTitle {
+              opacity: 0.7;
+            }
+            .subNav {
+              display: block;
+            }
+          }
+        }
       }
     }
   }

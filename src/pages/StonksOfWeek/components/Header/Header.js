@@ -26,13 +26,44 @@ export default function Header({account : address}) {
         ) : null}
       </div>
       <div className={styles.right}>
-        <div className={styles.rowItem}>
+        {/* <div className={styles.rowItem}>
           <span className={styles.text}>LEARN</span>
           <DownIcon />
         </div>
         <div className={styles.rowItem}>
           <span className={styles.text}>APP</span>
           <DownIcon />
+        </div> */}
+        <div className={styles.rightNav}>
+          <ul id="rightUl">
+            <li className={styles.navItem}>
+              <a class="" href="https://app.deus.finance/learn">
+                <div className={styles.navTitle}>
+                  LEARN
+                  <DownIcon className={styles.arrowNav} />
+                </div>
+              </a>
+              <ul className={styles.subNav}>
+                <li className={styles.subNavItem}><a href="https://wiki.deus.finance/"> DEUS wiki </a></li>
+                <li className={styles.subNavItem}><a href="https://deus.finance/litepaper.pdf"> LITEPAPER </a></li>
+              </ul>
+            </li>
+              <li className={styles.navItem}>
+                <a class="" href="https://app.deus.finance/">
+                  <div className={styles.navTitle}>
+                    APP
+                    <DownIcon className={styles.arrowNav} />
+                  </div>
+                </a>
+                <ul className={styles.subNav}>
+                  <li className={styles.subNavItem}><a href="https://app.deus.finance/swap"> SWAP </a></li>
+                  <li className={styles.subNavItem}><a href="https://app.deus.finance/coinbase"> COINBASE </a></li>
+                  <li className={styles.subNavItem}><a href="https://app.deus.finance/bakkt"> BAKKT </a></li>
+                  <li className={styles.subNavItem}><a href="https://app.deus.finance/staking"> STAKING </a></li>
+                  <li className={styles.subNavItem}><a href="https://app.deus.finance/vaults"> VAULTS </a></li>
+                </ul>
+              </li>
+          </ul>
         </div>
       </div>
     </div>
