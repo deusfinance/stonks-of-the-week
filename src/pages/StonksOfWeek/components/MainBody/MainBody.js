@@ -243,22 +243,18 @@ export default function MainBody({account: address}) {
             <div className={styles.modalContainer}>
               {
                 getSearchArray().map((item, index) => {
-                  if(index < 5) {
-                    if(item) {
-                      return (
-                        <RankItem
-                          search
-                          voted={item.id === voteItem.id}
-                          key={item.id}
-                          onVote={() => onVote(item)}
-                          item={item}
-                          rank={1 + index}
-                          last={index === Math.min(getSearchArray().length, 5)}
-                        />
-                      )
-                    } else {
-                      return null
-                    }
+                  if(item) {
+                    return (
+                      <RankItem
+                        search
+                        voted={item.id === voteItem.id}
+                        key={item.id}
+                        onVote={() => onVote(item)}
+                        item={item}
+                        rank={1 + index}
+                        last={index === Math.min(getSearchArray().length, 5)}
+                      />
+                    )
                   } else {
                     return null
                   }
