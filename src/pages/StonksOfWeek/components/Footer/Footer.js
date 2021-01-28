@@ -9,11 +9,11 @@ const items = [
     items: [
       {
         title: 'Discord',
-        url: '/',
+        url: 'https://discord.com/invite/xfeYT6acha',
       },
       {
         title: 'Telegram',
-        url: '/',
+        url: 'https://t.me/deusfinance',
       },
     ]
   },
@@ -22,11 +22,11 @@ const items = [
     items: [
       {
         title: 'DEUS',
-        url: '/',
+        url: 'https://etherscan.io/token/0x3b62f3820e0b035cc4ad602dece6d796bc325325',
       },
       {
         title: 'DEA',
-        url: '/',
+        url: 'https://etherscan.io/token/0x80ab141f324c3d6f2b18b030f1c4e95d4d658778',
       },
     ]
   },
@@ -35,23 +35,23 @@ const items = [
     items: [
       {
         title: 'WIKI',
-        url: '/',
+        url: 'https://wiki.deus.finance',
       },
       {
         title: 'Github',
-        url: '/',
+        url: 'https://github.com/deusfinance',
       },
       {
         title: 'Youtube',
-        url: '/',
+        url: 'https://www.youtube.com/channel/UCEVRMEr1Kt-n6ycQSEYBScQ',
       },
       {
         title: 'Medium',
-        url: '/',
+        url: 'https://medium.com/@deusfinance',
       },
       {
         title: 'Twitch',
-        url: '/',
+        url: 'https://www.twitch.tv/deus_finance',
       },
     ]
   },
@@ -60,19 +60,19 @@ const items = [
     items: [
       {
         title: 'SWAP',
-        url: '/',
+        url: 'https://app.deus.finance/swap',
       },
       {
         title: 'STAKING',
-        url: '/',
+        url: 'https://app.deus.finance/coinbase',
       },
       {
         title: 'VAULTS',
-        url: '/',
+        url: 'https://app.deus.finance/staking',
       },
       {
         title: 'DASHBOARD',
-        url: '/',
+        url: 'https://test.deus.finance/synchronizer',
       },
     ]
   }

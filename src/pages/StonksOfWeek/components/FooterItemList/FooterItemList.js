@@ -12,7 +12,7 @@ export default function FooterItemList({ title, items }) {
         <Anchor>
           {
             items.map(item => (
-              <Link key={item.title} className={styles.item} href={item.url} title={item.title} />
+              <Link key={item.title} target="_blank" className={styles.item} href={item.url} title={item.title} />
             ))
           }
         </Anchor>
