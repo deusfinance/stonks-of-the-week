@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  padding: 5px 22px;
+  padding: 0px 22px;
   justify-content: space-between;
   border-bottom: 1px solid white;
   position: sticky;
@@ -87,7 +87,7 @@
         position: absolute;
         min-width: 249px;
         right: 0;
-        top: 59px;
+        top: 75px;
         z-index: 10;
         padding: 0px;
         // border: 1px solid #808080;
@@ -135,7 +135,7 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-  
+        margin: 0;
         a {
           display: flex;
           text-decoration: none;
@@ -161,6 +161,7 @@
           margin-right: 10px;
           text-align: center;
           position: relative;
+          padding: 1em 0;
           .active {
             border-bottom: 2px solid #808080;
           }
