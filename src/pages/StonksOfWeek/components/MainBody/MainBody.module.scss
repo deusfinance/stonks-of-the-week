@@ -45,6 +45,9 @@
         background: -webkit-linear-gradient(#a3dea3, #c4eb8a);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media screen and (max-width: 600px) {
+          display: block;
+        }
       }
     }
   }
