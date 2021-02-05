@@ -143,7 +143,7 @@ export default function MainBody() {
     }
     if(!voteItem?.stock?.id) {
       setLoading(true);
-      const apiUrl = 'https://weeklystocks-api.herokuapp.com/wallets/'+address+'/stocks/'+item?.stock?.id.toString()+'/votes';
+      const apiUrl = 'https://weeklystocks-api.herokuapp.com/wallets/'+address+'/stocks/'+item?.id.toString()+'/votes';
       const web3 = new Web3(Web3.givenProvider || 'http://localhost:8080')
       const signature = await web3.eth.personal.sign(period + ' ' + item.ticker.toString(), address)
       fetch(apiUrl, {
@@ -179,7 +179,7 @@ export default function MainBody() {
     setLoading(true);
     const apiUrl = 'https://weeklystocks-api.herokuapp.com/wallets/'+address+'/stocks/'+voteItem?.stock?.id.toString()+'/votes';
     const web3 = new Web3(Web3.givenProvider || 'http://localhost:8080')
-    const signature = await web3.eth.personal.sign(voteItem?.stock?.ticker.toString(), address)
+    const signature = await web3.eth.personal.sign(voteItem?.positionType + ' ' + voteItem?.stock?.ticker.toString(), address)
     fetch(apiUrl, {
       method: 'DELETE',
       headers: {
@@ -189,7 +189,7 @@ export default function MainBody() {
       },
       body: JSON.stringify({
         address: address,
-        message: voteItem?.stock?.ticker.toString(),
+        message: voteItem?.positionType + ' ' + voteItem?.stock?.ticker.toString(),
         signature: signature,
         version: "2"
       })
@@ -209,7 +209,6 @@ export default function MainBody() {
   const getSearchArray = () => {
     return [firstItem, ...searchStocks].filter(each => each?.stock?.id !== firstItem?.stock?.id);
   }
-  console.log('voteItem', voteItem)
   return (
     <div className={styles.bodyMain}>
       {modalShow && <div className={styles.overlay} onClick={() => hideModal()} />}
@@ -229,7 +228,7 @@ export default function MainBody() {
         {
           voteItem?.stock?.id ? (
             <div className={styles.votted}>
-              <div className={styles.vottedText}>You have voted for {voteItem?.stock?.name}</div>
+              <div className={styles.vottedText}>You have voted for {voteItem?.stock?.name} ({voteItem?.positionType})</div>
               <Button size="long" text="RETRACT VOTE" handleClick={retractVote} />
             </div>
           ) : null
