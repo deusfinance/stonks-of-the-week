@@ -1,5 +1,7 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import Web3 from 'web3'
+import { useWeb3React } from '@web3-react/core';
+
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -8,6 +10,7 @@ import styles from './StonksOfWeek.module.scss';
 
 export default function StonksOfWeek() {
   const [account, setAccount] = useState('');
+  const context = useWeb3React()
 
   const connectMetamask = useCallback(async () => {
     // console.log('connectmetamask')
@@ -20,7 +23,7 @@ export default function StonksOfWeek() {
       // console.log('accounts', accounts)
       setAccount(accounts[0]);
     } catch(e) {
-      alert('Please install metamask on your browser')
+      // alert('Please install metamask on your browser')
     }
   },[]);
 
@@ -31,7 +34,7 @@ export default function StonksOfWeek() {
   return (
     <div className={styles.root} onScroll={e => e.preventDefault()}>
       <div className={styles.main}>
-        <Header account={account} />
+        <Header cweb={context} />
         <div className={styles.body}>
           <MainBody account={account} />
         </div>

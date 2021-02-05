@@ -17,6 +17,9 @@
       align-item: center;
       justify-content: center;
     }
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
     .rankData {
       display: flex;
       flex-direction: column;
@@ -99,6 +102,9 @@
       justify-content: center;
       margin-top: 15px;
     }
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
     .alreadyConducted {
       font-family: Edu Monument Grotesk Semi-Mono;
       font-weight: 400;
@@ -111,6 +117,92 @@
       font-size: 15px;
       color: white;
       margin-right: 43px;
+      @media screen and (max-width: 1200px) {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .mobileLeft {
+    display: flex;
+    flex-direction: row;
+    display: none;
+    @media screen and (max-width: 600px) {
+      display: initial;
+    }
+    .rankData {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      .rankText {
+        font-family: Edu Monument Grotesk Semi-Mono;
+        font-weight: 400;
+        color: white;
+        font-size: 25px;
+        text-shadow: 0px 0px 10px #FFFFFF;
+      }
+      .itemName {
+        font-family: Edu Monument Grotesk Mono;
+        font-weight: 400;
+        font-size: 25px;
+        color: white;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: center;
+      }
+      .itemDescription {
+        font-family: Edu Monument Grotesk Mono;
+        font-weight: 400;
+        font-size: 12.5px;
+        color:rgba(255, 255, 255, 0.5);
+      }
+    }
+    .stonkData {
+      display: flex;
+      flex-direction: row;
+      .itemInfo {
+        font-family: Edu Monument Grotesk Mono;
+        font-weight: 400;
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        margin-left: 35px;
+      }
+      .percent {
+        font-family: Edu Monument Grotesk Mono;
+        font-size: 12.5px;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  .mobileRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: none;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      align-item: center;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    @media screen and (max-width: 600px) {
+      display: initial;
+    }
+    .alreadyConducted {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 400;
+      font-size: 15px;
+      color: white;
+    }
+    .voteText {
+      font-family: Edu Monument Grotesk Semi-Mono;
+      font-weight: 400;
+      font-size: 15px;
+      color: white;
+      margin-top: 10px;
       @media screen and (max-width: 1200px) {
         margin-right: 0px;
         margin-bottom: 10px;

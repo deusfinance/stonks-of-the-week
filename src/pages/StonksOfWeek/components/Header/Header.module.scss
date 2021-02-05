@@ -39,6 +39,9 @@
       flex-direction: row;
       align-items: center;
       position: relative;
+      &:hover {
+        cursor: pointer;
+      }
 
       @media screen and (max-width: 420px) {
         margin-left: 0px;
@@ -52,7 +55,7 @@
         font-family: 'Edu Monument Grotesk Mono';
         background-color: #0e1d1b;
         border-radius: 6px;
-        padding: 5px 20px 5px 20px;
+        padding: 5px;
       }
     }
   }

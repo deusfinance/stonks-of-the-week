@@ -1,8 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 
-import Button from 'components/Button/Button';
+import TwoButton from 'components/TwoButton/TwoButton';
 import styles from './RankItem.module.scss';
+import FormatVotes from 'components/FormatVotes/FormatVotes';
 
 export default function RankItem({ voted, search, onVote, rank, last, item }) {
   return (
@@ -27,12 +28,37 @@ export default function RankItem({ voted, search, onVote, rank, last, item }) {
         </div>
       </div>
       <div className={styles.right}>
-        <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes so far</div>
+        <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes <FormatVotes short={item?.vote?.votesShort} long={item?.vote?.votesLong} /></div>
         {
           item?.vote?.closed === false ? (
-            <Button size="small" text="VOTE" handleClick={() => onVote(item.id)} />
+            <TwoButton leftClick={() => onVote(item.id)} rightClick={() => onVote(item.id)} size="small" leftText="SHORT" rightText="LONG" />
           ) : search ? (<span className={styles.alreadyConducted}>Closed</span>) : null
         }
+      </div>
+      <div className={styles.mobileLeft}>
+        <div className={styles.rankData}>
+          <div className={styles.rankText}>
+            #{item?.vote?.ranking === 0 ? 'Na' : item?.vote?.ranking}
+          </div>
+          <div className={styles.itemName}>{item?.ticker}</div>
+          <div className={styles.itemDescription}>
+            {item?.name}
+          </div>
+        </div>
+        <div className={styles.stonkData}>
+          <div className={styles.percent}>
+            {item?.vote?.percentageShare}%
+          </div>
+          <div className={styles.itemInfo}>{item?.exchange}</div>
+        </div>
+      </div>
+      <div className={styles.mobileRight}>
+        {
+          item?.vote?.closed === false ? (
+            <TwoButton leftClick={() => onVote(item.id, 'short')} rightClick={() => onVote(item.id, 'long')} size="small" leftText="SHORT" rightText="LONG" />
+          ) : search ? (<span className={styles.alreadyConducted}>Closed</span>) : null
+        }
+        <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes <FormatVotes short={20} long={325} /></div>
       </div>
     </div>
   )
