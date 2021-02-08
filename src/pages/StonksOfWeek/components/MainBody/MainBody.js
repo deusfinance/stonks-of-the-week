@@ -143,6 +143,7 @@ export default function MainBody() {
     }
     if(!voteItem?.stock?.id) {
       setLoading(true);
+      console.log('item', item)
       const apiUrl = 'https://weeklystocks-api.herokuapp.com/wallets/'+address+'/stocks/'+item?.id.toString()+'/votes';
       const web3 = new Web3(Web3.givenProvider || 'http://localhost:8080')
       const signature = await web3.eth.personal.sign(period + ' ' + item.ticker.toString(), address)
