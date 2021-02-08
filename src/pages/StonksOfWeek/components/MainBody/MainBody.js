@@ -207,7 +207,7 @@ export default function MainBody() {
   }
 
   const getSearchArray = () => {
-    return [firstItem, ...searchStocks].filter(each => each?.stock?.id !== firstItem?.stock?.id);
+    return [firstItem, ...searchStocks].filter(each => each?.id !== firstItem?.id);
   }
   return (
     <div className={styles.bodyMain}>
