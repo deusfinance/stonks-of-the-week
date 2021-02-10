@@ -222,7 +222,7 @@ export default function MainBody() {
           A stonk of the week, voted by the community
         </div>
         <div className={styles.line}>
-          The DEUS DAO Team will conduct <span>{firstItem?.name}</span> and open a Pool on Sushiswap and start an internal Liquidity Mining event.
+          The DEUS DAO Team will conduct <span>{firstItem?.name}</span> and open a Pool on your favorite DEX and start an internal Liquidity Mining event.
         </div>
       </div>
       <div className={styles.mainContainer}>
