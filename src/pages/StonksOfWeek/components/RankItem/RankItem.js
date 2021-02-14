@@ -58,7 +58,7 @@ export default function RankItem({ voted, search, onVote, rank, last, item }) {
             <TwoButton leftClick={() => onVote(item, 'short')} rightClick={() => onVote(item, 'long')} size="small" leftText="SHORT" rightText="LONG" />
           ) : search ? (<span className={styles.alreadyConducted}>Closed</span>) : null
         }
-        <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes <FormatVotes short={20} long={325} /></div>
+        <div className={styles.voteText}>{item?.vote?.numberOfVotes} Votes <FormatVotes short={item?.vote?.votesShort} long={item?.vote?.votesLong} /></div>
       </div>
     </div>
   )
