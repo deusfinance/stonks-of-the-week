@@ -12,6 +12,7 @@ const navs = [
               text: "SWAP",
               path: "https://app.deus.finance/swap",
               exact: true,
+              out: true,
 
           },
           {
@@ -19,12 +20,14 @@ const navs = [
               text: <span>SYNTHETICS</span>,
               path: "https://app.deus.finance/synchronizer",
               exact: true,
+              out: true,
           },
           {
               id: "coinbase",
               text: "COINBASE",
               path: "https://app.deus.finance/coinbase",
               exact: true,
+              out: true,
 
           },
           {
@@ -32,6 +35,7 @@ const navs = [
               text: "BAKKT",
               path: "https://app.deus.finance/bakkt",
               exact: true,
+              out: true,
 
           },
           {
@@ -39,6 +43,7 @@ const navs = [
               text: "STAKING",
               path: "https://app.deus.finance/staking",
               exact: false,
+              out: true,
           },
 
           {
@@ -46,6 +51,7 @@ const navs = [
               text: "VAULTS",
               path: "https://app.deus.finance/vaults",
               exact: true,
+              out: true,
           },
       ]
   },
