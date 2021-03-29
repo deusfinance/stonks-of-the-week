@@ -1,9 +1,8 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import Web3 from 'web3'
 import { useWeb3React } from '@web3-react/core';
+import Navbar from 'deus-navbar';
 
-
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import MainBody from './components/MainBody/MainBody';
 import styles from './StonksOfWeek.module.scss';
@@ -34,7 +33,7 @@ export default function StonksOfWeek() {
   return (
     <div className={styles.root} onScroll={e => e.preventDefault()}>
       <div className={styles.main}>
-        <Header cweb={context} />
+        <Navbar />
         <div className={styles.body}>
           <MainBody account={account} />
         </div>
