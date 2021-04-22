@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import Web3 from 'web3'
-import { useWeb3React } from '@web3-react/core';
 
 import Footer from './components/Footer/Footer';
 import MainBody from './components/MainBody/MainBody';
@@ -8,7 +7,6 @@ import styles from './StonksOfWeek.module.scss';
 
 export default function StonksOfWeek() {
   const [account, setAccount] = useState('');
-  const context = useWeb3React()
 
   const connectMetamask = useCallback(async () => {
     // console.log('connectmetamask')

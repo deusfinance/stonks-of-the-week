@@ -31,22 +31,38 @@
       font-weight: 400;
       font-size: 50px;
       color: white;
+      text-align: center;
     }
   }
-  .descriptionDiv {
-    margin-top: 18px;
-    .line {
-      font-family: Edu Monument Grotesk Semi-Mono;
-      font-weight: 400;
-      font-size: 20px;
-      text-align: center;
-      color: white;
-      span {
-        background: -webkit-linear-gradient(#a3dea3, #c4eb8a);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        @media screen and (max-width: 600px) {
-          display: block;
+  .descWithImg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    svg {
+      @media screen and (max-width: 600px) {
+        width: 30%;
+      }
+    }
+    .descriptionDiv {
+      margin-top: 18px;
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+      .line {
+        font-family: Edu Monument Grotesk Semi-Mono;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        span {
+          background: -webkit-linear-gradient(#a3dea3, #c4eb8a);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-decoration-color: #c4eb8a;
+          @media screen and (max-width: 600px) {
+            display: block;
+          }
         }
       }
     }
@@ -95,13 +111,13 @@
       margin-top: 50px;
       position: relative;
       width: 100%;
+      padding: 0 15px;
       .searchDescription {
         font-family: Edu Monument Grotesk Mono;
         font-weight: 400;
         color: white;
         font-size: 15px;
         padding-left: 20px;
-        text-align: center;
       }
       .searchInputDiv {
         margin-top: 13px;
@@ -155,7 +171,7 @@
     border: 1px solid #ffffff4a;
     border-radius: 6px;
     margin-top: 50px;
-    width: calc(100% - 44px);
+    width: calc(100% - 30px);
     .firstRankText {
       font-family: Edu Monument Grotesk Semi-Mono;
       font-weight: 400;

@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import Web3 from 'web3'
-import Spinner from 'react-spinkit';
 import { useWeb3React } from '@web3-react/core';
 
 import Button from 'components/Button/Button';
@@ -8,6 +7,9 @@ import TwoButton from 'components/TwoButton/TwoButton';
 import PageNavigation from 'components/PageNavigation/PageNavigation';
 import FormatVotes from 'components/FormatVotes/FormatVotes';
 import { ReactComponent as StonksIcon } from 'icons/STONKS.svg';
+import { ReactComponent as BinanceIcon } from 'icons/binance.svg';
+import { ReactComponent as LeftPancakeIcon } from 'icons/left-pancake.svg';
+import { ReactComponent as RightPancakeIcon } from 'icons/right-pancake.svg';
 import RankItem from '../RankItem/RankItem';
 import styles from './MainBody.module.scss';
 
@@ -214,28 +216,33 @@ export default function MainBody() {
     <div className={styles.bodyMain}>
       {modalShow && <div className={styles.overlay} onClick={() => hideModal()} />}
       <div className={styles.stonkDiv}>
+        <BinanceIcon />
         <StonksIcon />
-        <div className={styles.ofTheWeek}>OF THE WEEK</div>
+        <div className={styles.ofTheWeek}>OF THE MONTH</div>
       </div>
-      <div className={styles.descriptionDiv}>
-        <div className={styles.line}>
-          A stonk of the week, voted by the community
+      <div className={styles.descWithImg}>
+        <LeftPancakeIcon />
+        <div className={styles.descriptionDiv}>
+          <div className={styles.line}>
+            Voted by the community delivered by DEUS DAO to
+          </div>
+          <div className={styles.line}>
+            <span><u>Pancake Swap</u></span>
+          </div>
         </div>
-        <div className={styles.line}>
-          The DEUS DAO Team will conduct <span>{firstItem?.name}</span> and open a Pool on your favorite DEX and start an internal Liquidity Mining event.
-        </div>
+        <RightPancakeIcon />
       </div>
       <div className={styles.mainContainer}>
         {
           voteItem?.stock?.id ? (
             <div className={styles.votted}>
-              <div className={styles.vottedText}>You have voted for {voteItem?.stock?.name} ({voteItem?.positionType})</div>
+              <div className={styles.vottedText}>You have already created for {voteItem?.stock?.name} ({voteItem?.positionType})</div>
               <Button size="long" text="RETRACT VOTE" handleClick={retractVote} />
             </div>
           ) : null
         }
         <div className={styles.leaderboard}>
-          LEADERBOARD WEEK #1
+          LEADERBOARD MONTH #1
         </div>
         <div className={styles.searchDiv}>
           <div className={styles.searchDescription}>

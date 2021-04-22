@@ -13,7 +13,7 @@
     "antd": "^4.9.4",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
-    "deus-navbar": "github:deusfinance/navbar-library",
+    "deus-navbar": "github:deusfinance/navbar-library#89b8a596b71811996237adba8945edfe535b08f3",
     "dotenv": "^8.2.0",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
